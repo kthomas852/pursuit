@@ -101,6 +101,7 @@ f {
     /* keep from horizontally resizing text area */
     min-width: 100%;
     max-width: 100%;
+    margin-bottom: 10px;
   }
 
 .create {
@@ -117,7 +118,8 @@ f {
 }
 
 .yelp {
-    background-color: red;
+    background-color: #c41200;
+    color: whitesmoke;
 }
 
 .dropdown-content {
