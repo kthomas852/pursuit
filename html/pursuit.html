@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="../assets/pursuit.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../assets/javascript/hide.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,13 +38,10 @@
             <div class="col-md-1"></div>
             <div class="col-md-9 main">
             <div class="about">
-                <h1 class="c" style="text-align: center">What's the hot news in CS land!</h1>
-            </div>
-            <div class="about">
                 <h1 class="c">V-ino Hits Quota!</h1>
             </div>
             <div>
-                <img class="thumb" src="../assets/images/v.png" style="float: left;">
+                <img class="thumb" src="../assets/images/v.png">
                  <p id="naw"><br>
                     Shout out to the Vster who crossed the quota line for June.
             
@@ -50,10 +50,18 @@
                     place. Awesome job, V!
                 </p>  
             </div>
+            <button class="btn btn-primary btn-sm">Like</button> <button class="btn btn-primary btn-sm">Comment</button>
             </div>
             <div class="col-md-2"></div>
         </div>
+        <div id="create0" class="create"></div>
+        <div id="create1" class="create"></div>
+        <div id="create2" class="create"></div>
+        <div id="create3" class="create"></div>
+        <div id="create4" class="create"></div>
+        <div id="create5" class="create"></div>
         <div class="row" style="height: 100px;"></div>
+        <button id="hidden" class="hidden">You can't see me</button>
         <!--<div class="row foot"><f>© Copy Right 2018 Kyle Thomas</f></div>-->
     </div>
 </body>
