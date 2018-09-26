@@ -33,7 +33,7 @@ var block = {
 
 }; //END of Obj
 
-
+//Maybe break this into some helper functions
 $('document').ready(function () {
     console.log('Page Initialized');
     $('#submit').on('click', function () {
@@ -60,7 +60,7 @@ $('document').ready(function () {
         console.log(idTag);
         $(idTag).text(block.contSelector[submissionsCount]);
         submissionsCount++;
-    });
+    });   
     $('#validate').on('click', function () {
         let tempSub = submissionsCount;
         let current = '#create' + (tempSub - 1).toString();
