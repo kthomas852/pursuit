@@ -15,6 +15,28 @@
     font-weight: bold;
 }
 /*styling for new pages*/
+.pillars{
+    width: 100%;
+}
+
+.educate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
+.motivate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
+.celebrate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
 .spacer{
     height:50px;
 }

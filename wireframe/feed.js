@@ -35,7 +35,7 @@
 
   db.ref('/submissions').on('child_added', function(snapshot, prevChildKey){
     console.log('Added this Child right here--->')
-    let div = $('<div>').attr('class', 'main');
+    let div = $('<div>').attr('class', 'posting');
     div.append($('<h5>').text(snapshot.val().title));
     div.append($('<p>').text(snapshot.val().message));
     $('.feed').append(div);

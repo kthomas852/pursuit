@@ -11,7 +11,7 @@ body{
 }
 
 .mGray{
-    background-color: #A9A9A9
+    background-color: #A9A9A9;
 }
 
 .dGray{
@@ -31,11 +31,34 @@ body{
     height:50px;
 }
 
-.feed{
+.pillars{
+    width: 100%;
+}
+
+.educate{
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.motivate{
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.celebrate{
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+/*.feed{
     background-color: lightgray;
     width: 100%;
     margin-right: 10px;
-}
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom:10px;
+    border-radius: 10px;
+}*/
 
 .highlight{
     border-radius: 10px;
@@ -55,6 +78,7 @@ body{
     margin-left:5%;
     width: 60%;
     height: 400px;
+    position: relative;
 }
 
 .header {
@@ -68,6 +92,17 @@ body{
     width: 80px
 }
 
+.posting{
+    margin: 30px;
+    padding: 15px;
+    border: thin solid lightgrey;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.shift{
+    padding-left: 50px;
+}
 .main{
     border-radius: 10px;
 }
