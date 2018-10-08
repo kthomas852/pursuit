@@ -18,9 +18,10 @@ var config = {
       let message = $('#message').val();
       let date = moment().format('X');
 
-      $('#title').val('');
-      $('#email').val('');
-      $('#message').val('');
+      $('.main').html('<div class="spacer"></div>'+
+                    '<h1>Thank you for your submission!</h1><br>'+
+                    '<h2>Your story is now under approval</h2><br>'+
+                    '<h2>You will be notified once it has been reviewed.</h2><br>');
 
       sdb.ref('/submissions').push({
           title: title,
