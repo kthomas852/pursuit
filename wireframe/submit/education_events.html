@@ -2,8 +2,7 @@
 <!--This is the Contact page-->
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="submit.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -16,28 +15,27 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <img src="../images/yelp_bw.png" class="logo">
-            <p class="mega">The Pursuit</p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <p class="mega">The Pursuit</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <div>
-                        <div class="row">
-                            <a class="nav-item nav-link" href="../index.html">Back to The Pursuit <span class="sr-only">(current)</span></a>
-                        </div>
-                        <div class="row">
-                            <form class="navbar-form" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="row">
+                    <a class="nav-item nav-link" href="../index.html">Back to The Pursuit <span class="sr-only">(current)</span></a>
                     </div>
+                    <div class="row">
+                    <form class="navbar-form" role="search">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                              <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                              </div>
+                            </div>
+                          </form>
+                          </div>
+                          </div>
         </nav>
     </div>
 </head>
@@ -48,7 +46,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-7 main mGray">
                 <div class="about">
-                    <h1 class="c">Open Mic Submission Form:</h1>
+                    <h1 class="c">Yelp Education Events Submission Form:</h1>
                 </div>
                     <div class="row">
                     <div class="col-md-6">
@@ -66,26 +64,9 @@
                     <br>
                     <input type="email" id="email" placeholder=" you@yelp.com">
                     <br>
+                    <br> Event Date:
                     <br>
-                    <br> Topics Covered:
-                    <br>
-                    <input type="email" id="email" placeholder=" Food, culture, news">
-                    <br>
-                    <br>
-                    <br> Submitter's Role:
-                    <br>
-                    <input type="email" id="email" placeholder=" Your Role">
-                    <br>
-                    <br>
-                    <br> Summary of Topic:
-                    <br>
-                    <input class="form-control" type="email" id="email" placeholder="Brief Summury of what took place...">
-                    <br>
-                    <br>
-                    <br> Tips or Bullet Points:
-                    <br>
-                    <input type="email" id="email" placeholder=" Key Takeaways">
-                    <br>
+                    <input type="date" placeholder=" MM/DD/YYYY (Date past Event happened)">
                     <br>
                     </div>
                     <div class="col-md-6">
@@ -97,13 +78,15 @@
                     <input type="submit" name="submit" value="upload">
                     <br>
                     <br>
-                    <a href="../../assets/images/Yelp_works.png">Stuck???<br>See Example Open Mic Story here!</a>
+                    <a href="../../assets/images/Yelp_works.png">Stuck???<br>See Example Yelp Educational Events Story here!</a>
                     </div>
                     </div>
                     <br>
-                    <br> Conclusion:
+                    <br> Insert Story Here:
                     <br>
-                    <textarea id="message" class="form-control" rows="5" placeholder="Bring it back to Yelp or personal development..."></textarea>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Topic Covered & who put the event together...
+                    Description of the Event...
+                    Key Take aways..."></textarea>
                     <br>
                     <button id="send-up" class="btn btn-dangern yelp">Submit</button>
                     <br>
