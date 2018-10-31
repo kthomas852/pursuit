@@ -11,11 +11,22 @@ var config = {
   firebase.initializeApp(config);
 
   var sdb = firebase.database();
-
+  var article = document.getElementById('category');
+  var inputCheck = function(input){if(input){ return input;}else{return "";}};
   $('#send-up').click(function(){
       let title = $('#title').val();
-      let email = $('#email').val();
+      let email = inputCheck($('#email').val());
+      let myRole = inputCheck($('#myRole').val());
       let message = $('#message').val();
+      let biz = inputCheck($('#biz').val());
+      let category = article.dataset.category;
+      let link = inputCheck($('#link').val());
+      let FunFact = inputCheck($('#FunFact').val());
+      let topics = inputCheck($('#topics').val());
+      let bp = inputCheck($('#bulletPoints').val());
+      let summary = inputCheck($('#summary').val());
+      let eventDate = inputCheck($('#eventDate').val());
+      let rStat = inputCheck($('#rStat').val());
       let date = moment().format('X');
 
       $('.main').html('<div class="spacer"></div>'+
@@ -23,10 +34,27 @@ var config = {
                     '<h2>Your story is now under approval</h2><br>'+
                     '<h2>You will be notified once it has been reviewed.</h2><br>');
 
+      var auth = firebase.auth();
+      auth.onAuthStateChanged(firebaseUser => { 
       sdb.ref('/submissions').push({
+          reviewed: false,
           title: title,
+          PursuitersEmail: firebaseUser.email,
           email: email,
+          myRole: myRole,
+          biz: biz,
+          link: link,
+          topics: topics,
           message: message,
+          category: category,
+          funfact: FunFact,
+          summary: summary,
+          bulletPoints: bp,
+          rStat: rStat,
+          eventDate: eventDate,
           subDate: date
       });
+    });
+      var auth = firebase.auth();
+      auth.onAuthStateChanged(firebaseUser => { console.log(firebaseUser.email)});
   })

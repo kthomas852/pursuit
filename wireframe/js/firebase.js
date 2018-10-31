@@ -1,0 +1,69 @@
+
+//used to sign a use in with firebase Oauth and exhisting google account
+//auth.signInWithEmailAndPassword(email, pass);
+//used to create new access
+//auth.createUserWithEmailAndPassword(email, password);
+//checks to see if the oauth state has changed after login
+//auth.onAuthStateChanged(firebaseUser => { });
+
+
+var config = {
+    apiKey: "AIzaSyCnmHqTk9X8HD_T852mvO29QN370QKmeA0",
+    authDomain: "pursuit-19db7.firebaseapp.com",
+    databaseURL: "https://pursuit-19db7.firebaseio.com",
+    projectId: "pursuit-19db7",
+    storageBucket: "pursuit-19db7.appspot.com",
+    messagingSenderId: "61950672392"
+  };
+  firebase.initializeApp(config);
+  const auth = firebase.auth();
+  const txtEmail = document.getElementById('txtEmail');
+  const txtPassword = document.getElementById('txtPassword');
+  const btnLogin = document.getElementById('btnLogin');
+  const btnSignUp = document.getElementById('btnSignUp');
+  const btnLogout = document.getElementById('btnLogout');
+
+//Login listener
+btnLogin.addEventListener('click', e => {
+console.log("Button Pressed")
+const email =txtEmail.value;
+const pass = txtPassword.value;
+const auth = firebase.auth();
+//signin
+const promise = auth.signInWithEmailAndPassword(email, pass);
+promise.catch(e => console.log(e.message));
+});
+
+//signUp listener
+btnSignUp.addEventListener('click', e => {
+const email =txtEmail.value;
+const pass = txtPassword.value;
+const auth = firebase.auth();
+//signin
+const promise = auth.createUserWithEmailAndPassword(email, pass);
+promise.catch(e => console.log(e.message));
+});
+
+// btnLogout.addEventListener('click', e => {
+//     firebase.auth().signOut();
+// });
+
+//Auth listener
+auth.onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+        console.log(firebaseUser);
+        btnSignUp.classList.remove('hide');
+        console.log("Redirecting...");
+        console.log(window.location);
+        window.location.href = "home.html";
+    }else{
+        console.log('not logged in');
+        alert(
+`User not found!
+Pleae log in...`
+        );
+        btnSignUp.classList.add('hide');
+    }
+});
+
+//Google Auth
