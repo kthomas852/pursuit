@@ -29,9 +29,17 @@ console.log("Button Pressed")
 const email =txtEmail.value;
 const pass = txtPassword.value;
 const auth = firebase.auth();
+document.getElementById("txtEmail").value = "";
+document.getElementById("txtPassword").value = "";
 //signin
 const promise = auth.signInWithEmailAndPassword(email, pass);
 promise.catch(e => console.log(e.message));
+setTimeout(() => {
+    alert(
+        `User not found!
+        Pleae log in...`
+                );
+}, 1000);
 });
 
 //signUp listener
@@ -58,10 +66,6 @@ auth.onAuthStateChanged(firebaseUser => {
         window.location.href = "home.html";
     }else{
         console.log('not logged in');
-        alert(
-`User not found!
-Pleae log in...`
-        );
         btnSignUp.classList.add('hide');
     }
 });
