@@ -13,6 +13,8 @@ var config = {
   var sdb = firebase.database();
   var article = document.getElementById('category');
   var inputCheck = function(input){if(input){ return input;}else{return "";}};
+
+  //Button Listener to submit story
   $('#send-up').click(function(){
       let title = $('#title').val();
       let email = inputCheck($('#email').val());
@@ -28,12 +30,13 @@ var config = {
       let eventDate = inputCheck($('#eventDate').val());
       let rStat = inputCheck($('#rStat').val());
       let date = moment().format('X');
-
+                    //Completeion confirmation after submission
       $('.main').html('<div class="spacer"></div>'+
                     '<h1>Thank you for your submission!</h1><br>'+
                     '<h2>Your story is now under approval</h2><br>'+
                     '<h2>You will be notified once it has been reviewed.</h2><br>');
 
+    //Loads changes and pushes them to firebase.database
       var auth = firebase.auth();
       auth.onAuthStateChanged(firebaseUser => { 
       sdb.ref('/submissions').push({
@@ -55,6 +58,4 @@ var config = {
           subDate: date
       });
     });
-      var auth = firebase.auth();
-      auth.onAuthStateChanged(firebaseUser => { console.log(firebaseUser.email)});
   })

@@ -6,7 +6,6 @@
 //checks to see if the oauth state has changed after login
 //auth.onAuthStateChanged(firebaseUser => { });
 
-
 var config = {
     apiKey: "AIzaSyCnmHqTk9X8HD_T852mvO29QN370QKmeA0",
     authDomain: "pursuit-19db7.firebaseapp.com",
@@ -43,14 +42,14 @@ setTimeout(() => {
 });
 
 //signUp listener
-btnSignUp.addEventListener('click', e => {
-const email =txtEmail.value;
-const pass = txtPassword.value;
-const auth = firebase.auth();
-//signin
-const promise = auth.createUserWithEmailAndPassword(email, pass);
-promise.catch(e => console.log(e.message));
-});
+// btnSignUp.addEventListener('click', e => {
+// const email =txtEmail.value;
+// const pass = txtPassword.value;
+// const auth = firebase.auth();
+// //signin
+// const promise = auth.createUserWithEmailAndPassword(email, pass);
+// promise.catch(e => console.log(e.message));
+// });
 
 // btnLogout.addEventListener('click', e => {
 //     firebase.auth().signOut();
@@ -60,7 +59,7 @@ promise.catch(e => console.log(e.message));
 auth.onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
         console.log(firebaseUser);
-        btnSignUp.classList.remove('hide');
+        //btnSignUp.classList.remove('hide');
         console.log("Redirecting...");
         console.log(window.location);
         window.location.href = "home.html";
