@@ -25,7 +25,7 @@ var config = {
 //Login listener
 btnLogin.addEventListener('click', e => {
 console.log("Button Pressed")
-const email =txtEmail.value;
+const email =txtEmail.value + "@yelp.com";
 const pass = txtPassword.value;
 const auth = firebase.auth();
 document.getElementById("txtEmail").value = "";
